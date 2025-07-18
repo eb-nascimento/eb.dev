@@ -1,5 +1,8 @@
 {
   "dependencies": {
     "firebase": "^12.0.0"
+  },
+  "scripts": {
+    "build": "echo 'No build step required for static assets'"
   }
 }
