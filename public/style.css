@@ -99,8 +99,8 @@ p {
 }
 
 #minha-foto {
-  width: 250px;
-  height: 250px;
+  width: 75%;
+  height: auto;
   border-radius: 50%;
   margin-bottom: 60px;
   border: 5px solid var(--cor-primaria);
