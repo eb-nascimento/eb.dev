@@ -1,0 +1,113 @@
+:root {
+  --cor-primaria: #545aae;
+  --cor-secundaria: #9ea5ff;
+  --cor-terciaria: #f5f5f5;
+}
+
+html {
+  font-size: 62.5%;
+  color: var(--cor-terciaria);
+}
+
+body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden; /* Impede rolagem global */
+  background-color: var(--cor-primaria);
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  overflow-y: auto; /* Permite a rolagem dentro do contêiner */
+}
+
+section {
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.section.escuro {
+  background-color: var(--cor-secundaria);
+}
+
+.section.branco {
+  background-color: var(--cor-terciaria);
+  height: 100%;
+  width: 100%;
+}
+
+.section {
+  height: 75%;
+  width: 80%;
+}
+
+#profile-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 30%;
+  height: 120%;
+  margin-right: 10%;
+  background-color: var(--cor-terciaria);
+  border-radius: 20px;
+  color: #545aae;
+}
+
+#card-presentation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 75%;
+  width: 60%;
+}
+
+h1 {
+  font-size: 4.8rem;
+  color: var(--cor-primaria);
+  margin: 20px;
+}
+
+p {
+  width: 75%;
+  font-size: 20px;
+  padding: 20px;
+  font-weight: 500;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.icon {
+  height: 40px;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#minha-foto {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  margin-bottom: 60px;
+  border: 5px solid var(--cor-primaria);
+}
+
+h2 {
+  font-size: 4.2rem;
+  color: var(--cor-primaria);
+  margin: 30px;
+}
