@@ -3,3 +3,10 @@ git commit -m "Configura Firebase Hosting e GitHub Actions"
 git push origin main "v1.0"
 git push
 firebase deploy
+
+
+
+
+
+
+
