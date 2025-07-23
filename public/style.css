@@ -189,7 +189,7 @@ li {
   margin-inline: 280px;
 }
 
-.skills {
+.experiences {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -198,7 +198,7 @@ li {
   margin-top: 30px;
 }
 
-.skill {
+.experience {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -207,17 +207,17 @@ li {
   height: 500px;
 }
 
-.skill p {
+.experience p {
   padding: 0;
   margin: 10px 0;
 }
 
-.project p {
+.automacao p {
   padding: 20px;
   font-size: 18px;
 }
 
-.projects {
+.automacoes {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -225,7 +225,7 @@ li {
   width: 80%;
 }
 
-.project {
+.automacao {
   margin-top: 100px;
   display: flex;
   flex-direction: column;
@@ -241,9 +241,101 @@ li {
   color: var(--cor-terciaria);
   box-shadow: var(--cor-secundaria) 0px 10px 30px 0px;
 }
-.project:first-child {
+.automacao:first-child {
   margin-left: 60px;
 }
-.project:last-child {
+.automacao:last-child {
   margin-right: 60px;
+}
+
+#container-skills {
+  flex-direction: column;
+}
+
+.skills {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+.skill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 150px;
+  margin: 20px;
+  border-radius: 10px;
+  background-color: var(--cor-secundaria);
+  color: var(--cor-primaria);
+}
+
+.skill p {
+  padding: 0px;
+  margin: 20px;
+  height: 90px;
+  text-align: center;
+}
+
+.skill img {
+  margin-top: 15px;
+}
+
+#container-skills h2 {
+  color: var(--cor-terciaria);
+  margin: 60px;
+}
+
+#container-projects {
+  flex-direction: column;
+}
+#container-projects h2 {
+  color: var(--cor-terciaria);
+  margin: 60px;
+}
+
+.project-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.project-info h3 {
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+  color: #334666;
+  font-size: 4.4rem;
+  margin-left: 10px;
+}
+
+#logo-vesttor {
+  margin-right: 0;
+  width: 100px;
+  height: auto;
+}
+
+#print-vesttor {
+  width: 600px;
+  height: auto;
+  border-radius: 20px;
+  margin: 20px;
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 70%;
+  background-color: var(--cor-secundaria);
+  border-radius: 30px;
+  box-shadow: var(--cor-secundaria) 0px 0px 5px 0px;
 }
