@@ -75,6 +75,7 @@ li::marker {
 
 a {
   text-decoration: none;
+  color: var(--cor-primaria);
 }
 .container {
   display: flex;
@@ -82,7 +83,7 @@ a {
   align-items: center;
   height: 100vh;
   width: 100%;
-  overflow-y: auto; /* Permite a rolagem dentro do contêiner */
+  overflow-y: auto;
 }
 
 .text {
@@ -352,10 +353,6 @@ a {
   text-align: center;
 }
 
-.skill img {
-  /* margin-top: 15px; */
-}
-
 #container-skills h2 {
   color: var(--cor-terciaria);
   margin: 60px;
@@ -371,45 +368,62 @@ a {
 
 .project-info {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  width: 600px;
 }
 
-.project-info h3 {
+.project-name {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  width: 90%;
+}
+
+.project-name h3 {
   height: 100%;
   justify-content: center;
   align-items: center;
   text-align: center;
   margin: 0;
   color: #334666;
-  font-size: 4.4rem;
+  font-size: 3.2rem;
   margin-left: 10px;
 }
 
 #logo-vesttor {
   margin-right: 0;
-  width: 100px;
+  width: 60px;
   height: auto;
 }
 
 #print-vesttor {
-  width: 600px;
+  width: 500px;
   height: auto;
   border-radius: 20px;
-  margin: 20px;
+  margin-left: 20px;
 }
 
-.project {
+.project-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
-  height: 70%;
+  height: 50%;
+  width: 1040px;
   background-color: var(--cor-secundaria);
   border-radius: 30px;
   box-shadow: var(--cor-secundaria) 0px 0px 5px 0px;
+}
+
+.project a {
+  text-decoration: none;
+  color: var(--cor-primaria);
+  display: flex;
+  flex-direction: row;
+  width: auto;
 }
 
 #automacoes-section {
@@ -423,4 +437,19 @@ a {
 
 .section.branco h2 {
   margin-top: 60px;
+}
+
+.text-project {
+  font-size: 16px;
+  background-color: var(--cor-primaria);
+  color: var(--cor-terciaria);
+  width: 80%;
+  border-radius: 10px;
+  padding: 30px;
+}
+
+.tecnologias-utilizadas {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
 }
