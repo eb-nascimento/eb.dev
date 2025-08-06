@@ -406,6 +406,13 @@ a {
   margin-left: 20px;
 }
 
+#print-vesttor:hover {
+  transform: scale(1.05);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  box-shadow: var(--cor-primaria) 0px 10px 30px 0px;
+}
+
 .project-container {
   display: flex;
   flex-direction: row;
@@ -456,4 +463,45 @@ a {
 
 .icon-contatos {
   fill: var(--cor-terciaria);
+}
+
+#contato {
+  display: flex;
+  width: 80%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+}
+
+#contato h2 {
+  color: var(--cor-terciaria);
+  margin: 40px;
+}
+
+#contato .icons {
+  margin: 0;
+  margin-bottom: 40px;
+}
+
+#contato p {
+  color: var(--cor-terciaria);
+  margin: 0;
+  margin-inline: 10px;
+  padding: 0;
+  font-size: 16px;
+}
+
+#contato a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+hr {
+  width: 80%;
+  border: none;
+  border-top: 1px solid var(--cor-terciaria);
+  margin-top: 40px;
 }
