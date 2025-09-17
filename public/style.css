@@ -27,6 +27,7 @@ section {
 h1 {
   font-size: 5.8rem;
   margin: 20px;
+  text-align: center;
 }
 
 p {
@@ -202,7 +203,11 @@ a {
 }
 
 #sobre-mim-text p {
-  width: 50%;
+  max-width: 60%;
+}
+
+#sobre-mim-text h2 {
+  margin: 0;
 }
 
 .experiences {
@@ -212,6 +217,8 @@ a {
   align-items: center;
   gap: 40px;
   flex: 1;
+  padding-inline: 30px;
+  margin-bottom: 30px;
 }
 
 .experience {
@@ -225,10 +232,12 @@ a {
   border: var(--cor-primaria) 2px solid;
   border-radius: 20px;
   padding: 10px;
+  margin-bottom: 40px;
   transition: width 0.3s ease,
     /* Largura: dura 0.3s, começa imediatamente */ max-height 0.5s ease-out 0.3s,
     /* Altura: dura 0.5s, mas começa com 0.3s de atraso */ box-shadow 0.3s ease,
     transform 0.3s ease;
+  margin: 0px;
 }
 .experience:hover {
   box-shadow: var(--cor-primaria) 0px 10px 30px 0px;
@@ -504,4 +513,139 @@ hr {
   border: none;
   border-top: 1px solid var(--cor-terciaria);
   margin-top: 40px;
+}
+/* ======================================================= */
+/* ======================================================= */
+/* ======================================================= */
+/* ======================================================= */
+
+@media (max-width: 1870px) {
+  #container-experiences {
+    min-height: 100vh;
+    padding: 0;
+    flex-direction: column;
+    width: 100%;
+    gap: 40px;
+  }
+
+  #experiences-section {
+    width: 85%;
+    height: 75%;
+  }
+  .experiences {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+}
+/* ======================================================= */
+/* ======================================================= */
+/* ======================================================= */
+/* ======================================================= */
+
+@media (max-width: 1800px) {
+  #container-experiences {
+    height: auto;
+  }
+
+  #experiences-section {
+    width: 65%;
+  }
+  .experiences {
+    padding-inline: 65px;
+  }
+}
+
+/* ======================================================= */
+/* ======================================================= */
+/* ======================================================= */
+/* ======================================================= */
+
+@media (max-width: 1566px) {
+  #sobre-mim-container {
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .text {
+    font-size: 18px;
+  }
+
+  #sobre-mim-image {
+    height: 600px;
+    margin-inline: 60px;
+  }
+  h1 {
+    font-size: 4.8rem;
+  }
+
+  img.icon {
+    height: 40px;
+  }
+
+  #sobre-mim-text {
+    width: 60%;
+  }
+
+  #sobre-mim-text p {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 1300px) {
+  .container {
+    height: auto;
+    min-height: 100vh;
+  }
+
+  h1 {
+    font-size: 4.2rem;
+  }
+
+  #presentation-section {
+    height: auto;
+    flex-direction: column;
+    padding: 40px;
+    width: 60%;
+  }
+
+  #profile-card {
+    width: 40%;
+    order: -1;
+    background-color: transparent;
+    flex-direction: row;
+  }
+
+  .icons {
+    display: none;
+  }
+
+  #sobre-mim-image {
+    display: none;
+  }
+  #sobre-mim-section {
+    width: 65%;
+  }
+
+  #presentation-text {
+    padding: 0;
+    margin: 0;
+  }
+
+  .skills {
+    width: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 30px;
+  }
+
+  #card-presentation {
+    width: 100%;
+    height: auto;
+  }
+
+  #minha-foto {
+    margin-bottom: 0px;
+  }
 }

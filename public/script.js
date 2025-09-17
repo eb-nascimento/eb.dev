@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   toggleExperienceDescription();
   toggleAutomationDescription();
+  checkScreenSizeAndToggleScroll(); // Chamada inicial
 });
 
 function toggleExperienceDescription() {
@@ -61,6 +62,7 @@ function toggleAutomationDescription() {
   });
 }
 
+// LÓGICA DE ROLAGEM AUTOMÁTICA
 const containers = document.querySelectorAll(".container");
 let currentContainerIndex = 0;
 let isScrolling = false;
@@ -70,6 +72,8 @@ const SCROLL_DEBOUNCE_TIME = 100;
 
 let keyboardTimeout;
 const KEYBOARD_DEBOUNCE_TIME = 200;
+
+const screenWidthToStop = 1800;
 
 function scrollToContainer(index) {
   if (index >= 0 && index < containers.length) {
@@ -91,33 +95,29 @@ function scrollToContainer(index) {
   }
 }
 
-window.addEventListener(
-  "wheel",
-  (event) => {
-    event.preventDefault();
+const handleWheel = (event) => {
+  event.preventDefault();
 
-    clearTimeout(scrollTimeout);
-    scrollTimeout = setTimeout(() => {
-      if (isScrolling) {
-        return;
+  clearTimeout(scrollTimeout);
+  scrollTimeout = setTimeout(() => {
+    if (isScrolling) {
+      return;
+    }
+    if (event.deltaY > 0) {
+      // Scroll down
+      if (currentContainerIndex < containers.length - 1) {
+        scrollToContainer(currentContainerIndex + 1);
       }
-      if (event.deltaY > 0) {
-        // Scroll down
-        if (currentContainerIndex < containers.length - 1) {
-          scrollToContainer(currentContainerIndex + 1);
-        }
-      } else {
-        // Scroll up
-        if (currentContainerIndex > 0) {
-          scrollToContainer(currentContainerIndex - 1);
-        }
+    } else {
+      // Scroll up
+      if (currentContainerIndex > 0) {
+        scrollToContainer(currentContainerIndex - 1);
       }
-    }, SCROLL_DEBOUNCE_TIME);
-  },
-  { passive: false }
-);
+    }
+  }, SCROLL_DEBOUNCE_TIME);
+};
 
-window.addEventListener("keydown", (event) => {
+const handleKeydown = (event) => {
   if (event.key === "ArrowDown" || event.key === "ArrowUp") {
     event.preventDefault();
 
@@ -139,4 +139,21 @@ window.addEventListener("keydown", (event) => {
       }
     }, KEYBOARD_DEBOUNCE_TIME);
   }
-});
+};
+
+function checkScreenSizeAndToggleScroll() {
+  if (window.innerWidth <= screenWidthToStop) {
+    // Desliga a rolagem automática
+    window.removeEventListener("wheel", handleWheel, { passive: false });
+    window.removeEventListener("keydown", handleKeydown);
+    console.log("Listeners de rolagem removidos.");
+  } else {
+    // Liga a rolagem automática
+    window.addEventListener("wheel", handleWheel, { passive: false });
+    window.addEventListener("keydown", handleKeydown);
+    console.log("Listeners de rolagem adicionados.");
+  }
+}
+
+// Adiciona um listener para o evento de redimensionamento da janela
+window.addEventListener("resize", checkScreenSizeAndToggleScroll);
